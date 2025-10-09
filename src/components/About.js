@@ -17,14 +17,14 @@ function About() {
           <div className="about-image" data-aos="fade-right">
             <img 
               src={profileImage} 
-              alt="Photo de profil" 
+              alt="Portrait de Regis" 
               className="profile-img round" 
             />
           </div>
           
           {/* Texte et informations */}
           <div className="about-text" data-aos="fade-left">
-            <h3>TECHNICIEN RESEAUX ET TELECOMMUNICATIONS</h3>
+            <h3>TECHNICIEN RÉSEAUX ET TÉLÉCOMMUNICATIONS</h3>
             
             <p>
               Bonjour ! Je suis Technicien réseau et télécoms, passionné par les 
@@ -42,13 +42,13 @@ function About() {
             {/* Informations de contact */}
             <div className="about-info">
               <div className="info-item">
-                <strong>Email:</strong> regisabe@outlook.com
+                <strong>Email :</strong> regisabe@outlook.com
               </div>
               <div className="info-item">
-                <strong>Localisation:</strong> Cocody Abidjan, Côte d'Ivoire
+                <strong>Localisation :</strong> Cocody Abidjan, Côte d'Ivoire
               </div>
               <div className="info-item">
-                <strong>Disponibilité:</strong> Ouvert aux opportunités
+                <strong>Disponibilité :</strong> Ouvert aux opportunités
               </div>
             </div>
           </div>
