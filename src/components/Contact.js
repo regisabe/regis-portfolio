@@ -26,9 +26,9 @@ function Contact() {
     setStatus('');
 
     // Configuration EmailJS
-    const serviceID = 'regis-portfolio';
-    const templateID = 'VOTRE_TEMPLATE_ID'; // Remplace par ton Template ID
-    const publicKey = 'VOTRE_PUBLIC_KEY'; // Remplace par ta Public Key
+    const serviceID = 'service_6qrzer2';
+    const templateID = 'template_2wvpbvl';
+    const publicKey = 'u-aRiRyhot8D1Bc82';
 
     // Paramètres du template
     const templateParams = {
@@ -66,8 +66,7 @@ function Contact() {
       <div className="contact-container">
         <h2 className="section-title" data-aos="fade-up">Contactez-moi</h2>
         <p className="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
-          N'hésitez pas à me contacter pour toute question ou opportunité
-        </p>
+          Contactez-moi pour toute question, demande de devis ou opportunité professionnelle.        </p>
         
         <div className="contact-content">
           <div className="contact-info" data-aos="fade-right">
@@ -90,7 +89,7 @@ function Contact() {
               <div className="info-icon">📍</div>
               <div>
                 <h4>Localisation</h4>
-                <p>Cocody Abidjan, Côte d'Ivoire</p>
+                <p>Cocody-Abidjan, Côte d'Ivoire</p>
               </div>
             </div>
             <div className="social-links">
