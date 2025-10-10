@@ -41,7 +41,7 @@ function Footer() {
 <div className="footer-social">
   <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-icon">LinkedIn</a>
   <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-icon">GitHub</a>
-  <a href="https://facebokk.com/regis.abe.1" target="_blank" rel="noopener noreferrer" className="social-icon">Facebook</a>
+  <a href="https://facebook.com/regis.abe.1" target="_blank" rel="noopener noreferrer" className="social-icon">Facebook</a>
 </div>            
     </div>
           </div>

@@ -1,61 +1,159 @@
 import React, { useState } from 'react';
 import '../styles/Contact.css';
+import emailjs from '@emailjs/browser';
 
 function Contact() {
-  const [status, setStatus] = useState('');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
 
-  const handleSubmit = async (e) => {
+  const [, setStatus] = useState(''); // on ignore "status" pour éviter l'erreur ESLint
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
+    setIsLoading(true);
+    setStatus('');
 
-    try {
-      const response = await fetch('https://formspree.io/f/TON_FORM_ID', {
-        method: 'POST',
-        body: data,
-        headers: {
-          'Accept': 'application/json'
-        }
-      });
+    // Configuration EmailJS
+    const serviceID = 'regis-portfolio';
+    const templateID = 'VOTRE_TEMPLATE_ID'; // Remplace par ton Template ID
+    const publicKey = 'VOTRE_PUBLIC_KEY'; // Remplace par ta Public Key
 
-      if (response.ok) {
+    // Paramètres du template
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+      to_email: 'regisabe@outlook.com'
+    };
+
+    // Envoi de l'email
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
         setStatus('success');
-        form.reset();
-        alert('✅ Message envoyé avec succès !');
-      } else {
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+        setIsLoading(false);
+        alert('✅ Message envoyé avec succès ! Je vous répondrai bientôt.');
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
         setStatus('error');
-        alert('❌ Erreur lors de l\'envoi.');
-      }
-    } catch (error) {
-      setStatus('error');
-      alert('❌ Erreur réseau.');
-    }
+        setIsLoading(false);
+        alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+      });
   };
 
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        {/* ... reste du code identique ... */}
+        <h2 className="section-title" data-aos="fade-up">Contactez-moi</h2>
+        <p className="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
+          N'hésitez pas à me contacter pour toute question ou opportunité
+        </p>
         
-        <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
-          <div className="form-group">
-            <label htmlFor="name">Nom complet</label>
-            <input type="text" id="name" name="name" required placeholder="Votre nom" />
+        <div className="contact-content">
+          <div className="contact-info" data-aos="fade-right">
+            <h3>Informations de Contact</h3>
+            <div className="info-box">
+              <div className="info-icon">📧</div>
+              <div>
+                <h4>Email</h4>
+                <p>regisabe@outlook.com</p>
+              </div>
+            </div>
+            <div className="info-box">
+              <div className="info-icon">📱</div>
+              <div>
+                <h4>Téléphone</h4>
+                <p>+225 07889008731</p>
+              </div>
+            </div>
+            <div className="info-box">
+              <div className="info-icon">📍</div>
+              <div>
+                <h4>Localisation</h4>
+                <p>Cocody Abidjan, Côte d'Ivoire</p>
+              </div>
+            </div>
+            <div className="social-links">
+              <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+              <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+              <a href="https://facebook.com/regis.abe.1" target="_blank" rel="noopener noreferrer" className="social-link">Faccebook</a>
+            </div>
           </div>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="votre.email@example.com" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="subject">Sujet</label>
-            <input type="text" id="subject" name="subject" required placeholder="Sujet du message" />
-          </div>
-          <div className="form-group">
-            <label htmlFor="message">Message</label>
-            <textarea id="message" name="message" required rows="5" placeholder="Votre message..."></textarea>
-          </div>
-          <button type="submit" className="submit-btn">Envoyer le message</button>
-        </form>
+
+          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
+            <div className="form-group">
+              <label htmlFor="name">Nom complet</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Votre nom"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="votre.email@example.com"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="subject">Sujet</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                required
+                placeholder="Sujet du message"
+                value={formData.subject}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Votre message..."
+                value={formData.message}
+                onChange={handleChange}
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? 'Envoi en cours...' : 'Envoyer le message'}
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
