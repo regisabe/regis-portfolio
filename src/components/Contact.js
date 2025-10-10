@@ -39,28 +39,27 @@ function Contact() {
       to_email: 'regisabe@outlook.com'
     };
 
-    // Envoi de l'email
-    emailjs.send(serviceID, templateID, templateParams, publicKey)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
-        setIsLoading(false);
-        alert('✅ Message envoyé avec succès ! Je vous répondrai bientôt.');
-      })
-      .catch((error) => {
-        console.error('FAILED...', error);
-        setStatus('error');
-        setIsLoading(false);
-        alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
-      });
-  };
+// Envoi de l'email
+emailjs
+  .send(serviceID, templateID, templateParams, publicKey)
+  .then((response) => {
+    console.log('SUCCESS!', response.status, response.text);
+    setStatus('success');
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+    setIsLoading(false);
+  })
+  .catch((error) => {
+    console.error('FAILED...', error);
+    setStatus('error');
+    setIsLoading(false);
+  });
 
+}
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
