@@ -24,19 +24,13 @@ function About() {
           
           {/* Texte et informations */}
           <div className="about-text" data-aos="fade-left">
-            <h3>TECHNICIEN RÉSEAUX ET TÉLÉCOMMUNICATIONS</h3>
+            <h3>INFORMATICIEN RÉSEAUX ET TÉLÉCOMMUNICATIONS</h3>
             
             <p>
-              Bonjour ! Je suis Technicien réseau et télécoms, passionné par les 
-              technologies numériques et les solutions innovantes. J'aime connecter 
-              les systèmes, optimiser les infrastructures et assurer une communication 
-              fiable et performante.
+              Informaticien réseau et télécoms, passionné par les technologies numériques et les solutions innovantes. J’aime connecter les systèmes, optimiser les infrastructures et assurer une communication fiable, tout en développant constamment mes compétences.
             </p>
             
             <p>
-              Grâce à mes compétences techniques et à ma curiosité constante, 
-              je m'efforce de proposer des services efficaces tout en continuant 
-              à développer mes connaissances en réseaux et en télécommunications.
             </p>
             
             {/* Informations de contact */}

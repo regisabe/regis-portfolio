@@ -7,7 +7,7 @@ function Projects() {
     {
       id: 1,
       title: "Consultant DPI - Système Hospitalier",
-      description: "Formation et assistance du personnel médical sur l'utilisation du logiciel DPI (Dossiers Patients Informatisés) pour la digitalisation des données médicales / Administrateur système",
+      description: "Formation et support du personnel médical à l’utilisation du logiciel DPI pour la digitalisation des dossiers patients.",
       technologies: ["DPI", "Formation", "Système Médical", "Support"],
       company: "WINLOGIC.CI ",
       period: "2025",
@@ -17,7 +17,7 @@ function Projects() {
     {
       id: 2,
       title: "Infrastructure FTTH - Moov Africa",
-      description: "Technicien réseau télécom: Déploiement complet de l'infrastructure fibre optique pour Moov Côte d'Ivoire, incluant maintenance, installation, raccordement et tests de performance.",
+      description: "Déploiement et maintenance de l'infrastructure fibre optique pour Moov Côte d'Ivoire, incluant installation, raccordement et tests de performance.",
       technologies: ["FTTH", "Fibre Optique", "Moov CI", "Déploiement"],
       company: "2XLBTP-CI ",
       period: "2024-2025",
@@ -26,7 +26,7 @@ function Projects() {
      {
       id: 3,
       title: "Gestion Technique de Chantiers",
-      description: "Responsable technique : établissement d'attachements, bons de commandes, rapports de fin de travaux, gestion du stock matériel et coordination d'équipes.",
+      description: "gestion des commandes, rapports de travaux, suivi du stock et coordination d'équipes..",
       technologies: ["Gestion", "Coordination", "Excel", "Reporting"],
       company: "2XL TELECOM ",
       period: "2024-2025",
@@ -35,7 +35,7 @@ function Projects() {
     {
       id: 4,
       title: "Infrastructure FTTH - Orange CI",
-      description: "Technicien Réseau Télécom: Installation, maintenance et déploiement du réseau fibre optique Orange, garantissant la connectivité haut débit pour les clients résidentiels et entreprises.",
+      description: "Installation et maintenance du réseau fibre optique Orange, assurant une connectivité haut débit pour particuliers et entreprises.",
       technologies: ["FTTH", "Orange CI", "Installation", "Maintenance"],
       company: "PREMIUMCOMPANY SA ",
       period: "2022-2024",
@@ -45,7 +45,7 @@ function Projects() {
     {
       id: 5,
       title: "Gestion d'Infrastructure Réseau LAN",
-      description: ["Mise en place et gestion de réseau local (LAN) à la Direction de l'Informatique de la Documentation et des Archives (DIDA), incluant câblage structuré, configuration et maintenance."],
+      description: ["MMise en place et gestion du réseau LAN à la DIDA : câblage structuré, configuration et maintenance.."],
       technologies: ["LAN", "Câblage", "Configuration", "WAN", "VLAN"],
       company: "Ministère du Plan et du Developpement CI ",
       period: "2021-2022",
@@ -55,10 +55,8 @@ function Projects() {
     {
       id: 6,
       title: "Systèmes Photovoltaïques",
-      description: "Étude, dimensionnement et installation de systèmes photovoltaïques pour solutions énergétiques durables et autonomes.",
-      technologies: [ "Etude et dimensionnement","Système Hybride", "Système Isolé", "Pompage solaire"
-
-      ],
+      description: "Étude et dimensionnement de systèmes photovoltaïques pour solutions énergétiques durables et autonomes.",
+      technologies: [ "Etude et dimensionnement","Système Hybride", "Système Isolé", "Pompage solaire"],
       company: "ALSERVCI ",
       period: "2024",
       link: "#"
@@ -66,7 +64,7 @@ function Projects() {
     {
       id: 7,
       title: "Solutions Sécurité & Surveillance",
-      description: "Installation complète de systèmes de sécurité : caméras IP, pointeuses biométriques, visiophones, interphones et téléphones IP pour entreprises et particuliers.Installation de systèmes d'exploitation, logiciels, mise en place de réseaux LAN, maintenance informatique et réseau pour particuliers et entreprises.",
+      description: "Installation et maintenance de systèmes de sécurité (caméras IP, biométrie, visiophones, interphones, téléphones IP) et de réseaux LAN, ainsi que déploiement de systèmes d'exploitation et logiciels pour particuliers et entreprises.",
       technologies: ["Caméras IP", "Biométrie", "VoIP", "Sécurité"],
       company: "Freelance ",
       period: "2022-Présent",

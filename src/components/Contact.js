@@ -103,6 +103,8 @@ function Contact() {
               <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
               <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
               <a href="https://facebook.com/regis.abe.1" target="_blank" rel="noopener noreferrer" className="social-link">Faccebook</a>
+              <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" className="social-link">WhatsApp</a>
+
             </div>
           </div>
 
