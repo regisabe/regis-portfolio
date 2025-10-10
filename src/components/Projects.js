@@ -45,7 +45,7 @@ function Projects() {
     {
       id: 5,
       title: "Gestion d'Infrastructure Réseau LAN",
-      description: ["MMise en place et gestion du réseau LAN à la DIDA : câblage structuré, configuration et maintenance.."],
+      description: ["Mise en place et gestion du réseau LAN à la DIDA : câblage structuré, configuration et maintenance.."],
       technologies: ["LAN", "Câblage", "Configuration", "WAN", "VLAN"],
       company: "Ministère du Plan et du Developpement CI ",
       period: "2021-2022",
