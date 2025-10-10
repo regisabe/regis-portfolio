@@ -10,7 +10,7 @@ function Contact() {
     message: ''
   });
 
-  const [, setStatus] = useState(''); // on ignore "status" pour éviter l'erreur ESLint
+  const [status, setStatus] = useState(''); // gardé pour afficher le message à l’écran
   const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -39,34 +39,40 @@ function Contact() {
       to_email: 'regisabe@outlook.com'
     };
 
-// Envoi de l'email
-emailjs
-  .send(serviceID, templateID, templateParams, publicKey)
-  .then((response) => {
-    console.log('SUCCESS!', response.status, response.text);
-    setStatus('success');
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    setIsLoading(false);
-  })
-  .catch((error) => {
-    console.error('FAILED...', error);
-    setStatus('error');
-    setIsLoading(false);
-  });
+    // Envoi de l'email
+    emailjs
+      .send(serviceID, templateID, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        });
+      })
+      .catch((error) => {
+        console.error('FAILED...', error);
+        setStatus('error');
+      })
+      .finally(() => setIsLoading(false));
+  };
 
-}
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        <h2 className="section-title" data-aos="fade-up">Contactez-moi</h2>
-        <p className="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
-          Contactez-moi pour toute question, demande de devis ou opportunité professionnelle.        </p>
-        
+        <h2 className="section-title" data-aos="fade-up">
+          Contactez-moi
+        </h2>
+        <p
+          className="contact-subtitle"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Contactez-moi pour toute question, demande de devis ou opportunité professionnelle.
+        </p>
+
         <div className="contact-content">
           <div className="contact-info" data-aos="fade-right">
             <h3>Informations de Contact</h3>
@@ -92,13 +98,19 @@ emailjs
               </div>
             </div>
             <div className="social-links">
+            </div>
+            <div className="social-links">
               <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
               <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
               <a href="https://facebook.com/regis.abe.1" target="_blank" rel="noopener noreferrer" className="social-link">Faccebook</a>
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
+          <form
+            className="contact-form"
+            onSubmit={handleSubmit}
+            data-aos="fade-left"
+          >
             <div className="form-group">
               <label htmlFor="name">Nom complet</label>
               <input
@@ -147,9 +159,22 @@ emailjs
                 onChange={handleChange}
               ></textarea>
             </div>
+
             <button type="submit" className="submit-btn" disabled={isLoading}>
               {isLoading ? 'Envoi en cours...' : 'Envoyer le message'}
             </button>
+
+            {/* Messages de confirmation */}
+            {status === 'success' && (
+              <p className="message-success">
+                ✅ Message envoyé avec succès ! Je vous répondrai bientôt.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="message-error">
+                ❌ Erreur lors de l'envoi. Veuillez réessayer.
+              </p>
+            )}
           </form>
         </div>
       </div>

@@ -207,3 +207,15 @@
     font-size: 15px;
   }
 }
+
+.message-success {
+  color: #28a745;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.message-error {
+  color: #dc3545;
+  font-weight: 600;
+  margin-top: 10px;
+}
