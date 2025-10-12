@@ -40,7 +40,7 @@ function Skills() {
         { name: "Esprit d'équipe", level: 90 },
         { name: "Sens de l'analyse et résolution de problèmes", level: 90 },
         { name: "Capacité à apprendre rapidement", level: 90 },
-        { name: "Bonne communication technique et non technique", level: 90 },
+        { name: "Bonne communication technique", level: 90 },
         { name: "Transfert de compétences", level: 90 }
 
       ]
