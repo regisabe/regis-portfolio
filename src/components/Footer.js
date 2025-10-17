@@ -11,7 +11,7 @@ function Footer() {
           <div className="footer-section">
             <h3>ABE REGIS DEMONSTHENE</h3>
             <p>
-              Technicien réseau et télécoms, passionné par les technologies numériques et la mise en place de solutions fiables et performantes.
+              Technicien réseaux et télécoms, passionné par les technologies numériques et la mise en place de solutions fiables et performantes.
             </p>
           </div>
 

@@ -22,7 +22,7 @@ function Certifications() {
     {
       id: 3,
       title: "Brevet Technicien Superieur (BTS)",
-      issuer: "Formation Professionnelle",
+      issuer: "Centre Universitaire Professionalisé Abidjan",
       date: "2021",
       description: "Réseaux Informatiques et Télécomminications",
       icon: "🌐"
