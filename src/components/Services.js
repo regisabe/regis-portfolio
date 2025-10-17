@@ -8,21 +8,21 @@ function Services() {
       icon: "🌐",
       title: "Installation Réseau FTTH",
       description: "Déploiement complet de réseaux fibre optique pour particuliers et entreprises (Orange CI, Moov CI, GVA).",
-      features: ["Installation fibre", "Raccordement", "Tests de performance", "Maintenance"]
+      features: ["Installation fibre", "Raccordement", "Tests de performance", "Maintenances"]
     },
     {
       id: 2,
       icon: "🔧",
       title: "Maintenance Informatique",
       description: "Support technique complet : installation de systèmes, logiciels, configuration réseau et dépannage.",
-      features: ["Windows/Linux", "Antivirus", "Sauvegarde", "Optimisation"]
+      features: ["Windows/Linux", "Antivirus", "Sauvegarde", "Optimisation", "Ordinateurs"]
     },
     {
       id: 3,
       icon: "📡",
       title: "Infrastructure Réseau LAN",
       description: "Conception, installation et configuration de réseaux locaux pour optimiser votre connectivité.",
-      features: ["Câblage structuré", "Configuration switches", "VLAN", "Wi-Fi professionnel"]
+      features: ["Câblage structuré", "Configuration", "LAN,WLAN,VLAN", "Administrateur Systeme", "Microtique", "Domotique"]
     },
     {
       id: 4,
@@ -35,15 +35,15 @@ function Services() {
       id: 5,
       icon: "☀️",
       title: "Énergie Solaire",
-      description: "Étude, dimensionnement et installation de systèmes photovoltaïques pour l'autonomie énergétique.",
-      features: ["Étude de faisabilité", "Dimensionnement", "Installation", "Maintenance"]
+      description: "Étude, et dimensionnement de systèmes photovoltaïques pour l'autonomie énergétique.",
+      features: ["Étude de faisabilité", "Dimensionnement","Devis", "Maintenance"]
     },
     {
       id: 6,
       icon: "🎓",
       title: "Formation & Consulting",
-      description: "Formation professionnelle sur les systèmes réseau, télécoms et logiciels spécialisés (DPI).",
-      features: ["Formation sur site", "Documentation", "Support", "Consulting"]
+      description: "Formation professionnelle sur les systèmes réseau, télécoms et logiciels spécialisés.",
+      features: ["Formation sur site", "Documentation", "Support", "Conseils"]
     }
   ];
 

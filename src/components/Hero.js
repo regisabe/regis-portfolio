@@ -29,6 +29,8 @@ function Hero() {
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">Voir mes projets</a>
           <a href="#contact" className="btn btn-secondary">Me contacter</a>
+          <a href="#CV_Regis_Abe.pdf" className="btn btn-third">Voir Mon CV</a>
+
         </div>
       </div>
     </section>

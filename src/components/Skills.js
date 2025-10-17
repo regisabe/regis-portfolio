@@ -21,7 +21,9 @@ function Skills() {
         { name: "Installation et configuration de systèmes Windows & Linux", level: 80 },
         { name: "Utilisation d'équipements Cisco / Mikrotik / TP-Link", level: 75 },
         { name: "Virtualisation basique (ex. VirtualBox, VMware)", level: 70 },
-        { name: "Notions en téléphonie IP (VoIP)", level: 65 }
+        { name: "Notions en téléphonie IP (VoIP)", level: 70 },
+        { name: "GNS3, PacketTracer, Canva, pgAdmin,Anydesk, Microsoft, PUTTY, GLpi,...", level: 95 }
+
       ]
     },
     {
@@ -60,7 +62,6 @@ function Skills() {
                   <div key={idx} className="skill-item">
                     <div className="skill-info">
                       <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
                     </div>
                     <div className="skill-bar">
                       <div 

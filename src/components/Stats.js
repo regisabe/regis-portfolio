@@ -15,10 +15,10 @@ function Stats() {
   // ✅ Correction : on mémorise targetValues avec useMemo
   const targetValues = useMemo(
     () => ({
-      projects: 50,
-      clients: 30,
+      projects: 15,
+      clients: 50,
       experience: 4,
-      certifications: 5
+      certifications: 2
     }),
     []
   );

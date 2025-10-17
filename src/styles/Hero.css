@@ -13,11 +13,11 @@
   font-size: 48px;
   margin-bottom: 10px;
 }
-
 .hero-content h1 span {
   color: #fbbf24;
   font-weight: bold;
 }
+
 
 .hero-content h2 {
   font-size: 32px;
@@ -50,19 +50,29 @@
   background-color: #fbbf24;
   color: #333;
 }
-
 .btn-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(251, 191, 36, 0.4);
 }
+
 
 .btn-secondary {
   background-color: transparent;
   color: white;
   border: 2px solid white;
 }
-
 .btn-secondary:hover {
+  background-color: white;
+  color: #667eea;
+  transform: translateY(-3px);
+}
+
+
+.btn-third {
+  background-color: #f1f09f;
+  color: #333;
+}
+.btn-thir:hover {
   background-color: white;
   color: #667eea;
   transform: translateY(-3px);

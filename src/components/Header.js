@@ -35,7 +35,6 @@ function Header() {
           <li><a href="#skills" onClick={closeMenu}>Compétences</a></li>
           <li><a href="#certifications" onClick={closeMenu}>Certifications</a></li>
           <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
-          <li><a href="#cv_regis_abe" onClick={closeMenu}>CV_REGIS_ABE</a></li>
 
         </ul>
       </nav>

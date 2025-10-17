@@ -42,7 +42,7 @@ function Experience() {
       <div className="experience-container">
         <h2 className="section-title" data-aos="fade-up">Expérience Professionnelle</h2>
         <p className="experience-subtitle" data-aos="fade-up" data-aos-delay="100">
-          Mon parcours professionnel dans les réseaux et télécoms
+          Mon parcours professionnel
         </p>
         
         <div className="timeline">

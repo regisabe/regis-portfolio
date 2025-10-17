@@ -8,23 +8,23 @@ function Certifications() {
       title: "Système Photovoltaïque",
       issuer: "ALSERVCI",
       date: "Décembre 2024",
-      description: "Étude, dimensionnement et installation de systèmes photovoltaïques",
+      description: "Attestation de formation: Étude, dimensionnement et installation de systèmes photovoltaïques",
       icon: "☀️"
     },
     {
       id: 2,
       title: "Technicien Réseaux et Télécoms",
-      issuer: "Certification Professionnelle",
-      date: "2022",
-      description: "Spécialisation en configuration, installation et maintenance d'infrastructures réseau",
+      issuer: "Premium Company SA/ 2XL BTP-CI",
+      date: "2022-2025",
+      description: "Spécialisation en configuration, installation (cablâge) et maintenance d'infrastructures réseau Fibre Optique (Orange CI, Moov CI, GVA)",
       icon: "🎓"
     },
     {
       id: 3,
-      title: "Installation FTTH",
+      title: "Brevet Technicien Superieur (BTS)",
       issuer: "Formation Professionnelle",
-      date: "2022",
-      description: "Installation et maintenance de réseaux fibre optique (Orange CI, Moov CI)",
+      date: "2021",
+      description: "Réseaux Informatiques et Télécomminications",
       icon: "🌐"
     }
   ];
