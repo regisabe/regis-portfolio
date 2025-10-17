@@ -143,3 +143,12 @@
     font-size: 15px;
   }
 }
+
+.animated-title {
+  animation: fadeInOut 3s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
