@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Hero.css';
+import CV from '../assets/CV_REGIS_ABE.pdf';
 
 function Hero() {
   const titles = [
     "Ingénieur Réseau & Télécoms",
     "Spécialiste FTTH",
-    "Specialiste Reseaux",
+    "Spécialiste Réseaux",
     "Technicien Certifié",
     "Expert Infrastructure"
   ];
-  
+
   const [titleIndex, setTitleIndex] = useState(0);
 
   useEffect(() => {
@@ -18,19 +19,28 @@ function Hero() {
     }, 3000);
 
     return () => clearInterval(interval);
-}, [titles.length]);
+  }, [titles.length]);
 
   return (
     <section className="hero" id="home">
       <div className="hero-content">
         <h1>Bonjour, je suis <span>REGIS DEMONSTHENE ABE</span></h1>
         <h2 className="animated-title">{titles[titleIndex]}</h2>
-        <p>Connecter les systèmes, optimiser les infrastructures, garantir la performance</p>
+        <p>Connecter les systèmes, optimiser les infrastructures, garantir la performance.</p>
+
         <div className="hero-buttons">
           <a href="#projects" className="btn btn-primary">Voir mes projets</a>
           <a href="#contact" className="btn btn-secondary">Me contacter</a>
-          <a href="#CV_Regis_Abe.pdf" className="btn btn-third">Voir Mon CV</a>
 
+          {/* ✅ Lien fonctionnel pour ouvrir ton CV */}
+          <a 
+            href={CV} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn-third"
+          >
+            Voir mon CV
+          </a>
         </div>
       </div>
     </section>
