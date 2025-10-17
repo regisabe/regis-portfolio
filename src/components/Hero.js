@@ -4,7 +4,7 @@ import CV from '../assets/CV_REGIS_ABE.pdf';
 
 function Hero() {
   const titles = [
-    "Ingénieur Réseau & Télécoms",
+    "Technicien Réseau & Télécoms",
     "Spécialiste FTTH",
     "Spécialiste Réseaux",
     "Technicien Certifié",
