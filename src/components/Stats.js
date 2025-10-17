@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import '../styles/Stats.css';
 
 function Stats() {
@@ -12,36 +12,19 @@ function Stats() {
   const statsRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
 
-  const targetValues = {
-    projects: 50,
-    clients: 30,
-    experience: 4,
-    certifications: 5
-  };
+  // ✅ Correction : on mémorise targetValues avec useMemo
+  const targetValues = useMemo(
+    () => ({
+      projects: 50,
+      clients: 30,
+      experience: 4,
+      certifications: 5
+    }),
+    []
+  );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          animateCounters();
-          setHasAnimated(true);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (statsRef.current) {
-      observer.observe(statsRef.current);
-    }
-
-    return () => {
-      if (statsRef.current) {
-        observer.unobserve(statsRef.current);
-      }
-    };
-  }, [hasAnimated]);
-
-  const animateCounters = () => {
+  // ✅ animateCounters ne dépend plus d’un objet recréé à chaque rendu
+  const animateCounters = useCallback(() => {
     const duration = 2000;
     const steps = 60;
     const stepDuration = duration / steps;
@@ -62,7 +45,26 @@ function Stats() {
         }));
       }, stepDuration);
     });
-  };
+  }, [targetValues]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          animateCounters();
+          setHasAnimated(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const currentRef = statsRef.current;
+    if (currentRef) observer.observe(currentRef);
+
+    return () => {
+      if (currentRef) observer.unobserve(currentRef);
+    };
+  }, [hasAnimated, animateCounters]);
 
   return (
     <section className="stats" ref={statsRef}>
@@ -72,19 +74,19 @@ function Stats() {
           <div className="stat-number">{counters.projects}+</div>
           <div className="stat-label">Projets Réalisés</div>
         </div>
-        
+
         <div className="stat-item" data-aos="fade-up" data-aos-delay="100">
           <div className="stat-icon">👥</div>
           <div className="stat-number">{counters.clients}+</div>
           <div className="stat-label">Clients Satisfaits</div>
         </div>
-        
+
         <div className="stat-item" data-aos="fade-up" data-aos-delay="200">
           <div className="stat-icon">⏱️</div>
           <div className="stat-number">{counters.experience}+</div>
           <div className="stat-label">Années d'Expérience</div>
         </div>
-        
+
         <div className="stat-item" data-aos="fade-up" data-aos-delay="300">
           <div className="stat-icon">🎓</div>
           <div className="stat-number">{counters.certifications}+</div>

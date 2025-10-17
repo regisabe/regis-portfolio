@@ -18,7 +18,7 @@ function Hero() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, []);
+}, [titles.length]);
 
   return (
     <section className="hero" id="home">
