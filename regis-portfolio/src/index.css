@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode sombre */
+/* Mode sombre */
+body.dark-mode {
+  background-color: #010108;
+  color: #eee;
+}
+
+body.dark-mode .header {
+  background-color: #16213e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .header .nav ul li a {
+  color: #eee;
+}
+
+body.dark-mode .about,
+body.dark-mode .skills,
+body.dark-mode .experience {
+  background-color: #16213e;
+}
+
+body.dark-mode .experience .section-title,
+body.dark-mode .experience h3,
+body.dark-mode .experience h4,
+body.dark-mode .experience p {
+  color: #eee;
+}
+
+body.dark-mode .timeline-content {
+  background-color: #0f3460;
+  color: #eee;
+}
+
+body.dark-mode .timeline-content h3 {
+  color: #eee;
+}
+
+body.dark-mode .timeline-content h4 {
+  color: #64b5f6;
+}
+
+body.dark-mode .timeline-content p {
+  color: #ccc;
+}
+
+body.dark-mode .timeline-period {
+  background-color: #0f3460;
+  color: #64b5f6;
+}
+
+body.dark-mode .timeline::before {
+  background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+}
+
+body.dark-mode .timeline-icon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.5);
+}
+
+body.dark-mode .projects,
+body.dark-mode .certifications,
+body.dark-mode .contact {
+  background-color: #0f3460;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .skills-category,
+body.dark-mode .certification-card,
+body.dark-mode .contact-info,
+body.dark-mode .contact-form,
+body.dark-mode .timeline-content {
+  background-color: #16213e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #eee;
+}
+
+body.dark-mode .section-title,
+body.dark-mode h3,
+body.dark-mode h4 {
+  color: #eee;
+}
+
+body.dark-mode p,
+body.dark-mode .skill-name,
+body.dark-mode .project-info p,
+body.dark-mode .services-subtitle,
+body.dark-mode .cv-subtitle {
+  color: #ccc;
+}
+
+body.dark-mode .about-info {
+  background-color: #0f3460;
+  border-color: #2563eb;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  background-color: #0f3460;
+  color: #eee;
+  border-color: #2563eb;
+}
+
+body.dark-mode .form-group label {
+  color: #eee;
+}
+
+body.dark-mode .footer {
+  background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);
+}
+
+body.dark-mode .service-card {
+  background-color: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .service-card:hover {
+  background-color: #1e2e4f;
+}
+
+body.dark-mode .service-description {
+  color: #ccc;
+}
+
+body.dark-mode .certification-card {
+  background-color: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .cert-description {
+  color: #ccc;
+}
+
+body.dark-mode .stat-number,
+body.dark-mode .stat-label {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .info-card {
+  background-color: #16213e;
+  color: #eee;
+}
+
+body.dark-mode .info-card h4 {
+  color: #eee;
+}
+
+body.dark-mode .info-card li {
+  color: #ccc;
+}
+
+body.dark-mode .contact-subtitle {
+  color: #ccc;
+}
+
+body.dark-mode .contact-info h3,
+body.dark-mode .contact-form {
+  color: #eee;
+}
+
+body.dark-mode .info-box h4 {
+  color: #64b5f6;
+}
+
+body.dark-mode .info-box p {
+  color: #ccc;
+}
+
+body.dark-mode .social-link {
+  background-color: #0f3460;
+  color: #64b5f6;
+  border-color: #64b5f6;
+}
+
+body.dark-mode .social-link:hover {
+  background-color: #64b5f6;
+  color: #16213e;
+}
+
+body.dark-mode .submit-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+body.dark-mode .scroll-to-top {
+  background: linear-gradient(135deg, #f5f5f5 10%, #16213e 90%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.6);
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #16213e;
+  border-color: #2563eb;
+  color: #eee;
+}
+
+body.dark-mode .theme-toggle:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+body.dark-mode .tech-tag {
+  background-color: #0f3460;
+  color: #64b5f6;
+}
+
+body.dark-mode .tech-tag:hover {
+  background-color: #64b5f6;
+  color: #16213e;
+}
+
+body.dark-mode .skill-progress {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+}
+
+body.dark-mode .skill-bar {
+  background-color: #0f3460;
+}
+
+body.dark-mode .hamburger span {
+  background-color: #eee;
+}
+
+body.dark-mode .nav {
+  background-color: #16213e;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .experience-subtitle,
+body.dark-mode .cv-subtitle {
+  color: #ccc;
+}

@@ -1,0 +1,219 @@
+/* Variables de couleurs recommandées (à définir globalement si possible) */
+:root {
+    --primary-color: #2563eb; /* Un bleu plus moderne */
+    --secondary-color: #fbbf24; 
+    --text-color: #282828;
+    --background-light: #f7f9fb;
+}
+
+.about {
+    padding: 80px 20px;
+    background-color: var(--background-light, #ffffff); /* Utiliser un fond légèrement cassé */
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titre de Section */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--text-color, #333);
+    margin-bottom: 50px;
+    position: relative;
+    font-weight: 700; /* Mettre le titre en gras */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color, #fbbf24);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Contenu Global */
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Image */
+.about-image {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.profile-img {
+    width: 300px;
+    height: 300px;
+    /* Suppression du border-radius initial si la classe .round est utilisée */
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03); /* Légèrement réduit l'échelle pour éviter la distorsion sur les petites variations */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Version ronde (Activée dans About.js) */
+.profile-img.round {
+    border-radius: 50%;
+    /* Utilisation de la couleur principale pour la bordure */
+    border: 5px solid var(--primary-color, #2563eb); 
+}
+
+/* Texte */
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h3 {
+    font-size: 24px;
+    color: var(--primary-color, #2563eb);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-color, #282828);
+    margin-bottom: 15px;
+    text-align: justify; /* Améliore la lecture des blocs de texte */
+}
+
+/* Informations de Contact */
+.about-info {
+    margin-top: 30px;
+    padding: 20px;
+    /* Nouveau design pour le bloc d'informations */
+    background-color: rgba(37, 99, 235, 0.05); /* Arrière-plan très léger avec la couleur principale */
+    border-left: 5px solid var(--primary-color, #2563eb); /* Bordure latérale pour l'accent */
+    border-radius: 0 8px 8px 0;
+}
+
+/* Style de la Liste (<ul>) */
+.about-info ul {
+    list-style: none; /* Supprime les puces par défaut */
+    padding: 0;
+    margin: 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center; /* Alignement vertical pour les icônes */
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--text-color, #282828);
+}
+
+/* Style des icônes de contact */
+.info-icon {
+    font-size: 1.2rem; /* Taille de l'icône */
+    margin-right: 12px;
+    color: var(--primary-color, #2563eb); 
+}
+
+.info-item strong {
+    color: #333;
+    font-weight: 600;
+    margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        flex: 0 0 auto;
+    }
+
+    .about-text {
+        width: 100%;
+        padding: 0 20px; /* Ajoute un peu de padding pour éviter que le texte ne colle aux bords */
+    }
+
+    .about-text p {
+        text-align: left; /* Retour à l'alignement normal ou justifié sur mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 60px 20px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-text h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .about-text p {
+        font-size: 15px;
+        text-align: justify; 
+    }
+
+    /* Le bloc d'info reste aligné à gauche dans cette structure */
+    .about-info {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 40px 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-text h3 {
+        font-size: 18px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .about-info {
+        padding: 15px;
+        border-radius: 0 5px 5px 0;
+    }
+
+    .info-item {
+        font-size: 14px;
+    }
+    .info-icon {
+        font-size: 1rem;
+    }
+}
