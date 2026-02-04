@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, MessageSquare, Calendar } from 'lucide-react';
 import '../styles/Contact.css';
 import emailjs from '@emailjs/browser';
 
@@ -67,7 +67,7 @@ function Contact() {
           {/* Colonne Gauche : Infos */}
           <div className="contact-info" data-aos="fade-right">
             <h3>Parlons de votre projet</h3>
-            
+
             <div className="info-box">
               <div className="info-icon"><Mail size={20} /></div>
               <div>
@@ -95,9 +95,15 @@ function Contact() {
             <div className="social-links-container">
               <h4>Suivez-moi</h4>
               <div className="social-grid">
-                <a href="https://linkedin.com/..." target="_blank" className="social-btn"><Linkedin size={20} /></a>
-                <a href="https://wa.me/..." target="_blank" className="social-btn whatsapp"><MessageSquare size={20} /></a>
-                <a href="https://cal.com/..." target="_blank" className="social-btn calendar"><Calendar size={20} /></a>
+                <a href="https://linkedin.com/..." target="_blank" rel="noreferrer" className="social-btn">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://wa.me/..." target="_blank" rel="noreferrer" className="social-btn whatsapp">
+                  <MessageSquare size={20} />
+                </a>
+                <a href="https://cal.com/..." target="_blank" rel="noreferrer" className="social-btn calendar">
+                  <Calendar size={20} />
+                </a>
               </div>
             </div>
           </div>
@@ -114,7 +120,7 @@ function Contact() {
                 <input type="email" name="email" required placeholder="jean.koffi@mail.com" value={formData.email} onChange={handleChange} />
               </div>
             </div>
-            
+
             <div className="form-group">
               <label>Sujet</label>
               <input type="text" name="subject" required placeholder="Demande de devis fibre / Solaire" value={formData.subject} onChange={handleChange} />

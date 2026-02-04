@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, Calendar, BookOpen } from 'lucide-react'; // Pour des petits détails visuels
+import { Award } from 'lucide-react';
 import '../styles/Certifications.css';
 
 function Certifications() {
@@ -23,7 +23,7 @@ function Certifications() {
     {
       id: 3,
       title: "Brevet de Technicien Supérieur (BTS)",
-      issuer: "Centre Universitaire Professionnalisé",
+      issuer: "Centre Universitaire Professionalisé",
       date: "2021",
       description: "Réseaux Informatiques et Télécommunications",
       icon: "🎓"
@@ -35,11 +35,10 @@ function Certifications() {
       <div className="certifications-container">
         <h2 className="section-title" data-aos="fade-up">Diplômes & Certifications</h2>
         <div className="underline"></div>
-        
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
-            <div 
-              key={cert.id} 
+            <div
+              key={cert.id}
               className="cert-card"
               data-aos="zoom-in-up"
               data-aos-delay={index * 150}
@@ -48,7 +47,6 @@ function Certifications() {
                 <span className="cert-badge-icon">{cert.icon}</span>
                 <span className="cert-year">{cert.date}</span>
               </div>
-              
               <div className="cert-content">
                 <h3>{cert.title}</h3>
                 <div className="cert-issuer">
@@ -57,7 +55,6 @@ function Certifications() {
                 </div>
                 <p>{cert.description}</p>
               </div>
-              
               <div className="cert-footer">
                 <div className="decoration-line"></div>
               </div>
