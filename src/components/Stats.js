@@ -11,7 +11,7 @@ const STATS_DATA = [
 
 function Stats() {
   // Initialisation des compteurs à zéro
-  const initialCounters = useMemo(() => 
+  const initialCounters = useMemo(() =>
     STATS_DATA.reduce((acc, stat) => ({ ...acc, [stat.key]: 0 }), {}),
     []
   );
@@ -19,12 +19,6 @@ function Stats() {
   const [counters, setCounters] = useState(initialCounters);
   const statsRef = useRef(null);
   const [hasAnimated, setHasAnimated] = useState(false);
-
-  // Mémoriser les valeurs cibles
-  const targetValues = useMemo(
-    () => STATS_DATA.reduce((acc, stat) => ({ ...acc, [stat.key]: stat.target }), {}),
-    []
-  );
 
   const animateCounters = useCallback(() => {
     const duration = 2000;
@@ -38,7 +32,6 @@ function Stats() {
 
       const timer = setInterval(() => {
         currentValue += increment;
-        
         if (currentValue >= stat.target) {
           currentValue = stat.target;
           clearInterval(timer);
@@ -47,7 +40,7 @@ function Stats() {
         // Utilisation de Math.round() pour une meilleure fluidité sur les petites valeurs
         setCounters((prev) => ({
           ...prev,
-          [key]: Math.round(currentValue) 
+          [key]: Math.round(currentValue)
         }));
       }, stepDuration);
     });
@@ -77,10 +70,10 @@ function Stats() {
     <section className="stats" ref={statsRef}>
       <div className="stats-container">
         {STATS_DATA.map((stat, index) => (
-          <div 
-            className="stat-item" 
+          <div
+            className="stat-item"
             key={stat.key}
-            data-aos="fade-up" 
+            data-aos="fade-up"
             data-aos-delay={index * 100} // Décalage basé sur l'index
           >
             <div className="stat-icon">{stat.icon}</div>

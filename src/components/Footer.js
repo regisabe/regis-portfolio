@@ -1,4 +1,5 @@
 import React from 'react';
+import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare, Calendar } from 'lucide-react';
 import '../styles/Footer.css';
 
 function Footer() {
@@ -8,51 +9,49 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-content">
-          <div className="footer-section">
+          {/* Section Identité */}
+          <div className="footer-section brand">
             <h3>ABE REGIS DEMONSTHENE</h3>
-            <p>
-              Technicien réseaux et télécoms.
-            </p>
+            <p>Technicien réseaux et télécoms spécialisé en infrastructures fibre optique et énergie solaire.</p>
           </div>
 
+          {/* Section Navigation */}
           <div className="footer-section">
             <h4>Navigation</h4>
             <ul className="footer-links">
               <li><a href="#home">Accueil</a></li>
               <li><a href="#about">À propos</a></li>
-              <li><a href="#projects">Projets</a></li>
+              <li><a href="#services">Services</a></li>
               <li><a href="#skills">Compétences</a></li>
-              <li><a href="#contact">Contacts</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 
+          {/* Section Contact Express */}
           <div className="footer-section">
             <h4>Contact</h4>
             <ul className="footer-contact">
-              <li>📧 regisabe@outlook.com</li>
-              <li>📱 +225 0788900731</li>
-              <li>📍 Cocody, Abidjan, Côte d'Ivoire</li>
+              <li><Mail size={16} /> regisabe@outlook.com</li>
+              <li><Phone size={16} /> +225 07 88 90 07 31</li>
+              <li><MapPin size={16} /> Cocody, Abidjan</li>
             </ul>
           </div>
 
+          {/* Section Réseaux */}
           <div className="footer-section">
             <h4>Suivez-moi</h4>
             <div className="footer-social">
-<div className="footer-social">
-  <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-icon">LinkedIn</a>
-  <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-icon">GitHub</a>
-  <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" className="social-icon">WhatsApp</a>
-  <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" className="social-icon">Rendez-vous</a>
-
-
-</div>            
-    </div>
+              <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={20} /></a>
+              <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" title="GitHub"><Github size={20} /></a>
+              <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageSquare size={20} /></a>
+              <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" title="Prendre RDV"><Calendar size={20} /></a>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {currentYear} Regisabe. Tous droits réservés.</p>
-          <p>Développé avec ❤️ et React.js</p>
+          <p>&copy; {currentYear} <strong>Regisabe</strong>. Tous droits réservés.</p>
+          <p className="footer-dev">Développé avec <span>React.js</span></p>
         </div>
       </div>
     </footer>

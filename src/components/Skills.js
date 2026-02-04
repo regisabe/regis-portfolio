@@ -1,50 +1,39 @@
 import React from 'react';
+import { Network, Monitor, Cpu, Users } from 'lucide-react'; // Import d'icônes pour chaque catégorie
 import '../styles/Skills.css';
 
 function Skills() {
   const skillsData = [
     {
-      category: "🌐 Réseaux & Télécoms",
+      category: "Réseaux & Télécoms",
+      icon: <Network size={20} />,
       skills: [
-        { name: "Configuration et maintenance de réseaux LAN / WAN", level: 70 },
-        { name: "Câblage réseau (cuivre & fibre optique)", level: 95 },
-        { name: "Routage et commutation (Switch, Routeur)", level: 70 },
-        { name: "Gestion d'adressage IP, DNS, DHCP", level: 75 },
-        { name: "Sécurité réseau de base (pare-feu, contrôle d'accès)", level: 70 },
-        { name: "Mise en place de réseaux Wi-Fi professionnels", level: 90 },
-
+        "LAN / WAN / VLAN", "Fibre Optique & Cuivre", "Routage & Commutation", 
+        "DNS / DHCP / IP", "Pare-feu & VPN", "Wi-Fi Professionnel"
       ]
     },
     {
-      category: "🖥Systèmes & Outils",
+      category: "Systèmes & Outils",
+      icon: <Monitor size={20} />,
       skills: [
-        { name: "Installation et configuration de systèmes Windows & Linux", level: 80 },
-        { name: "Utilisation d'équipements Cisco / Mikrotik / TP-Link", level: 75 },
-        { name: "Virtualisation basique (ex. VirtualBox, VMware)", level: 70 },
-        { name: "Notions en téléphonie IP (VoIP)", level: 70 },
-        { name: "GNS3, PacketTracer, Canva, pgAdmin,Anydesk, Microsoft, PUTTY, GLpi, PVSYST...", level: 95 }
-
+        "Windows & Linux Server", "Cisco / Mikrotik", "Virtualisation (VMware)", 
+        "Téléphonie IP", "GNS3 / PVSYST / GLPI"
       ]
     },
     {
-      category: "💻 Informatique & Autres",
+      category: "Informatique & Solaire",
+      icon: <Cpu size={20} />,
       skills: [
-        { name: "Connaissances en HTML / CSS / JavaScript de base", level: 50 },
-        { name: "Notions en maintenance informatique (hardware / software)", level: 80 },
-        { name: "Gestion de petites bases de données", level: 50 },
-        { name: "Installation de système de securité electronique", level: 75 },
-        { name: " Etude et dimensionnement de système photovoltaïques Isolé,Hybride, Pompage solaire", level: 75 },
+        "Maintenance HW/SW", "Sécurité Électronique", "Solaire Photovoltaïque", 
+        "Bases de données", "HTML / CSS / JS"
       ]
     },
     {
-      category: "🤝 Compétences Humaines",
+      category: "Compétences Humaines",
+      icon: <Users size={20} />,
       skills: [
-        { name: "Esprit d'équipe", level: 90 },
-        { name: "Sens de l'analyse et résolution de problèmes", level: 90 },
-        { name: "Capacité à apprendre rapidement", level: 90 },
-        { name: "Bonne communication technique", level: 90 },
-        { name: "Transfert de compétences", level: 90 }
-
+        "Analyse & Résolution", "Apprentissage Rapide", "Communication", 
+        "Esprit d'équipe", "Transfert de Savoir"
       ]
     }
   ];
@@ -52,24 +41,21 @@ function Skills() {
   return (
     <section className="skills" id="skills">
       <div className="skills-container">
-        <h2 className="section-title">Mes Compétences</h2>
+        <h2 className="section-title" data-aos="fade-up">Expertises Techniques</h2>
+        <div className="underline"></div>
+        
         <div className="skills-grid">
-          {skillsData.map((category, index) => (
-            <div key={index} className="skills-category">
-              <h3>{category.category}</h3>
-              <div className="skills-list">
-                {category.skills.map((skill, idx) => (
-                  <div key={idx} className="skill-item">
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div 
-                        className="skill-progress" 
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+          {skillsData.map((cat, index) => (
+            <div key={index} className="skills-category-card" data-aos="fade-up" data-aos-delay={index * 100}>
+              <div className="category-header">
+                <span className="category-icon">{cat.icon}</span>
+                <h3>{cat.category}</h3>
+              </div>
+              <div className="skills-tag-container">
+                {cat.skills.map((skill, idx) => (
+                  <span key={idx} className="skill-tag">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>

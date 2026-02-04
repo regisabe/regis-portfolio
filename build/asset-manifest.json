@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.d08e703b.css",
-    "main.js": "/static/js/main.150aa7e3.js",
+    "main.css": "/static/css/main.16f8567c.css",
+    "main.js": "/static/js/main.9b271084.js",
     "static/media/profile.jpg": "/static/media/profile.08124fd297ae6d28b482.jpg",
+    "static/media/CV_REGIS_ABE.pdf": "/static/media/CV_REGIS_ABE.30a981d37b6ba3fc1486.pdf",
     "index.html": "/index.html",
-    "main.d08e703b.css.map": "/static/css/main.d08e703b.css.map",
-    "main.150aa7e3.js.map": "/static/js/main.150aa7e3.js.map"
+    "main.16f8567c.css.map": "/static/css/main.16f8567c.css.map",
+    "main.9b271084.js.map": "/static/js/main.9b271084.js.map"
   },
   "entrypoints": [
-    "static/css/main.d08e703b.css",
-    "static/js/main.150aa7e3.js"
+    "static/css/main.16f8567c.css",
+    "static/js/main.9b271084.js"
   ]
 }

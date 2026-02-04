@@ -1,4 +1,5 @@
 import React from 'react';
+import { Award, Calendar, BookOpen } from 'lucide-react'; // Pour des petits détails visuels
 import '../styles/Certifications.css';
 
 function Certifications() {
@@ -8,25 +9,23 @@ function Certifications() {
       title: "Système Photovoltaïque",
       issuer: "ALSERVCI",
       date: "Décembre 2024",
-      description: "Attestation de formation: Étude, dimensionnement et installation de systèmes photovoltaïques",
+      description: "Étude, dimensionnement et installation de systèmes photovoltaïques",
       icon: "☀️"
     },
-    
     {
       id: 2,
       title: "Technicien Réseaux et Télécoms",
-      issuer: "Premium Company SA/ 2XL BTP-CI",
-      date: "2022-2025",
-      description: "Spécialisation en configuration, installation (cablâge) et maintenance d'infrastructures réseau Fibre Optique (Orange CI, Moov CI, GVA)",
+      issuer: "Premium Company SA / 2XL BTP-CI",
+      date: "2022 - 2025",
+      description: "Maintenance d'infrastructures Fibre Optique (Orange, Moov, GVA)",
       icon: "🌐"
     },
-
     {
       id: 3,
-      title: "Brevet Technicien Superieur (BTS)",
-      issuer: "Centre Universitaire Professionalisé Abidjan",
+      title: "Brevet de Technicien Supérieur (BTS)",
+      issuer: "Centre Universitaire Professionnalisé",
       date: "2021",
-      description: "Réseaux Informatiques et Télécomminications",
+      description: "Réseaux Informatiques et Télécommunications",
       icon: "🎓"
     }
   ];
@@ -34,20 +33,34 @@ function Certifications() {
   return (
     <section className="certifications" id="certifications">
       <div className="certifications-container">
-        <h2 className="section-title" data-aos="fade-up">Formations & Certifications</h2>
+        <h2 className="section-title" data-aos="fade-up">Diplômes & Certifications</h2>
+        <div className="underline"></div>
+        
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
             <div 
               key={cert.id} 
-              className="certification-card"
-              data-aos="flip-left"
-              data-aos-delay={index * 100}
+              className="cert-card"
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 150}
             >
-              <div className="cert-icon">{cert.icon}</div>
-              <h3>{cert.title}</h3>
-              <h4>{cert.issuer}</h4>
-              <p className="cert-date">{cert.date}</p>
-              <p className="cert-description">{cert.description}</p>
+              <div className="cert-header">
+                <span className="cert-badge-icon">{cert.icon}</span>
+                <span className="cert-year">{cert.date}</span>
+              </div>
+              
+              <div className="cert-content">
+                <h3>{cert.title}</h3>
+                <div className="cert-issuer">
+                   <Award size={16} className="gold-icon" />
+                   <span>{cert.issuer}</span>
+                </div>
+                <p>{cert.description}</p>
+              </div>
+              
+              <div className="cert-footer">
+                <div className="decoration-line"></div>
+              </div>
             </div>
           ))}
         </div>

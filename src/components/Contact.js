@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare, Calendar } from 'lucide-react';
 import '../styles/Contact.css';
 import emailjs from '@emailjs/browser';
 
@@ -10,14 +11,19 @@ function Contact() {
     message: ''
   });
 
-  const [status, setStatus] = useState(''); // gardé pour afficher le message à l’écran
+  const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
+  // Effacer le message de statut après 5 secondes
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => setStatus(''), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [status]);
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
@@ -25,12 +31,10 @@ function Contact() {
     setIsLoading(true);
     setStatus('');
 
-    // Configuration EmailJS
     const serviceID = 'service_6qrzer2';
     const templateID = 'template_2wvpbvl';
     const publicKey = 'u-aRiRyhot8D1Bc82';
 
-    // Paramètres du template
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
@@ -39,144 +43,94 @@ function Contact() {
       to_email: 'regisabe@outlook.com'
     };
 
-    // Envoi de l'email
-    emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+    emailjs.send(serviceID, templateID, templateParams, publicKey)
+      .then(() => {
         setStatus('success');
-        setFormData({
-          name: '',
-          email: '',
-          subject: '',
-          message: ''
-        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
       })
-      .catch((error) => {
-        console.error('FAILED...', error);
-        setStatus('error');
-      })
+      .catch(() => setStatus('error'))
       .finally(() => setIsLoading(false));
   };
 
   return (
     <section className="contact" id="contact">
       <div className="contact-container">
-        <h2 className="section-title" data-aos="fade-up">
-          Contactez-moi
-        </h2>
-        <p
-          className="contact-subtitle"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          Contactez-moi pour toute question, demande de devis ou opportunité professionnelle.
-        </p>
+        <div className="contact-header" data-aos="fade-up">
+          <h2 className="section-title">Contactez-moi</h2>
+          <div className="underline"></div>
+          <p className="contact-subtitle">
+            Une question ou un projet ? Je suis à votre écoute pour toute collaboration.
+          </p>
+        </div>
 
         <div className="contact-content">
+          {/* Colonne Gauche : Infos */}
           <div className="contact-info" data-aos="fade-right">
-            <h3>Informations de Contact</h3>
+            <h3>Parlons de votre projet</h3>
+            
             <div className="info-box">
-              <div className="info-icon">📧</div>
+              <div className="info-icon"><Mail size={20} /></div>
               <div>
                 <h4>Email</h4>
                 <p>regisabe@outlook.com</p>
               </div>
             </div>
+
             <div className="info-box">
-              <div className="info-icon">📱</div>
+              <div className="info-icon"><Phone size={20} /></div>
               <div>
                 <h4>Téléphone</h4>
-                <p>+225 07889008731</p>
+                <p>+225 07 88 90 07 31</p>
               </div>
             </div>
+
             <div className="info-box">
-              <div className="info-icon">📍</div>
+              <div className="info-icon"><MapPin size={20} /></div>
               <div>
                 <h4>Localisation</h4>
                 <p>Cocody-Abidjan, Côte d'Ivoire</p>
               </div>
             </div>
-            <div className="social-links">
-            </div>
-            <div className="social-links">
-              <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-              <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
-              <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" className="social-link">WhatsApp</a>
-              <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" className="social-link">Rendez-vous</a>
-            
+
+            <div className="social-links-container">
+              <h4>Suivez-moi</h4>
+              <div className="social-grid">
+                <a href="https://linkedin.com/..." target="_blank" className="social-btn"><Linkedin size={20} /></a>
+                <a href="https://wa.me/..." target="_blank" className="social-btn whatsapp"><MessageSquare size={20} /></a>
+                <a href="https://cal.com/..." target="_blank" className="social-btn calendar"><Calendar size={20} /></a>
+              </div>
             </div>
           </div>
 
-          <form
-            className="contact-form"
-            onSubmit={handleSubmit}
-            data-aos="fade-left"
-          >
-            <div className="form-group">
-              <label htmlFor="name">Nom complet</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Votre Nom & Prenoms"
-                value={formData.name}
-                onChange={handleChange}
-              />
+          {/* Colonne Droite : Formulaire */}
+          <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
+            <div className="form-row">
+              <div className="form-group">
+                <label>Nom complet</label>
+                <input type="text" name="name" required placeholder="Ex: Jean Koffi" value={formData.name} onChange={handleChange} />
+              </div>
+              <div className="form-group">
+                <label>Email</label>
+                <input type="email" name="email" required placeholder="jean.koffi@mail.com" value={formData.email} onChange={handleChange} />
+              </div>
             </div>
+            
             <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="votre.email@example.com"
-                value={formData.email}
-                onChange={handleChange}
-              />
+              <label>Sujet</label>
+              <input type="text" name="subject" required placeholder="Demande de devis fibre / Solaire" value={formData.subject} onChange={handleChange} />
             </div>
+
             <div className="form-group">
-              <label htmlFor="subject">Sujet</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                required
-                placeholder="Sujet du message"
-                value={formData.subject}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="5"
-                placeholder="Votre message..."
-                value={formData.message}
-                onChange={handleChange}
-              ></textarea>
+              <label>Message</label>
+              <textarea name="message" required rows="5" placeholder="Détaillez votre besoin ici..." value={formData.message} onChange={handleChange}></textarea>
             </div>
 
             <button type="submit" className="submit-btn" disabled={isLoading}>
-              {isLoading ? 'Envoi en cours...' : 'Envoyer le message'}
+              {isLoading ? 'Envoi...' : 'Envoyer le message'}
             </button>
 
-            {/* Messages de confirmation */}
-            {status === 'success' && (
-              <p className="message-success">
-                ✅ Message envoyé avec succès ! Je vous répondrai bientôt.
-              </p>
-            )}
-            {status === 'error' && (
-              <p className="message-error">
-                ❌ Erreur lors de l'envoi. Veuillez réessayer.
-              </p>
-            )}
+            {status === 'success' && <p className="status-msg success">✅ Message envoyé ! Je reviens vers vous rapidement.</p>}
+            {status === 'error' && <p className="status-msg error">❌ Échec de l'envoi. Veuillez réessayer.</p>}
           </form>
         </div>
       </div>

@@ -1,127 +1,90 @@
 import React from 'react';
+import { Globe, Server, Sun, Shield, Code, Wifi } from 'lucide-react'; // Installe lucide-react si besoin
 import '../styles/Projects.css';
 
 function Projects() {
   const projects = [
-
     {
       id: 1,
+      category: "Digitalisation",
+      icon: <Server className="p-icon" />,
       title: "Consultant DPI - Système Hospitalier",
-      description: "Formation et support du personnel médical à l'utilisation du logiciel DPI pour la digitalisation des dossiers patients.",
-      technologies: ["DPI", "Formation", "Système Médical", "Support"],
-      company: "EPHD SINFRA ",
+      description: "Accompagnement à la transformation digitale : formation du personnel médical et déploiement du Dossier Patient Informatisé.",
+      technologies: ["DPI", "Santé Digitale", "Support Technique"],
+      company: "EPHD SINFRA",
       period: "2025",
-      link: "#"
     },
-
     {
       id: 2,
-      title: "Installation Réseau Fibre Optique (FTTH)",
-      description: "Installation Réseau FTTH",
-      technologies: ["FTTH", "Fibre Optique", "Orange CI"],
-      company: "Centre Culturel et des TIC Ivoiro-Coréen A.O ",
+      category: "Réseau",
+      icon: <Wifi className="p-icon" />,
+      title: "Infrastructure Fibre Optique (FTTH)",
+      description: "Déploiement de solutions Très Haut Débit et raccordement client final pour le réseau Orange CI.",
+      technologies: ["FTTH", "Soudure Fibre", "Réflectométrie"],
+      company: "Centre Culturel TIC Ivoiro-Coréen",
       period: "2023",
-      link: "#"
     },
-     {
-      id: 3,
-      title: "Maison connecté",
-      description: "Cablage reseau fibre optique et reseau LAN, installation de Baie Informatique de points d'acces ...",
-      technologies: ["Cablage", "LAN", "VOIP", "ExtenderWifi"],
-      company: "RESIDENCE DOUMBIA ",
-      period: "2023",
-      link: "#"
-    },
-    {
-      id: 4,
-      title: "Solution de Telephonie IP",
-      description: "cablage installation d'un système de telephonie ip   ",
-      technologies: ["LAN", "PABX", "Installation", "Maintenance", "VOIP"],
-      company: "ASER-BTPCI SARL ",
-      period: "2024",
-      link: "#"
-    },
-    
     {
       id: 5,
-      title: "Gestion d'Infrastructure Réseau LAN",
-      description: ["Actualistaion du Réseau LAN de la Direction Informatique de la Documentation et des Archives : câblage structuré, configuration et maintenance.."],
-      technologies: ["LAN", "Câblage", "Configuration", "WAN", "VLAN"],
-      company: "Ministère du Plan et du Developpement CI ",
-      period: "Décembre 2022",
-      link: "#"
+      category: "Réseau",
+      icon: <Globe className="p-icon" />,
+      title: "Audit & Optimisation LAN",
+      description: "Actualisation complète du réseau LAN : câblage structuré, segmentation VLAN et sécurisation des accès.",
+      technologies: ["Cisco", "VLAN", "Câblage Structuré"],
+      company: "Ministère du Plan et du Développement CI",
+      period: "Déc. 2022",
     },
-
     {
       id: 6,
-      title: "Systèmes Photovoltaïques",
-      description: "Étude et dimensionnement de systèmes photovoltaïques pour solutions énergétiques durables et autonomes.",
-      technologies: [ "PVSYST","Système Hybride", "Système Isolé", "Pompage solaire"],
-      company: "ALSERVCI ",
+      category: "Énergie",
+      icon: <Sun className="p-icon" />,
+      title: "Ingénierie Photovoltaïque",
+      description: "Étude technique et dimensionnement de systèmes solaires hybrides et solutions de pompage autonome.",
+      technologies: ["PVSYST", "Solaire Hybride", "Dimensionnement"],
+      company: "ALSERVCI",
       period: "2024",
-      link: "#"
     },
     {
       id: 7,
-      title: "Solutions Sécurité & Surveillance",
-      description: "Installation et Configuration de Pointeuse Biométrique.",
-      technologies: ["IKVISION", "Biométrie", "IP", "Sécurité", "ZKTECO", "DAHUA"],
-      company: "KYKA SERVICE SARL ",
-      period: "AVRIL 2024",
-      link: "#"
+      category: "Sécurité",
+      icon: <Shield className="p-icon" />,
+      title: "Sécurité & Biométrie",
+      description: "Mise en place de systèmes de contrôle d'accès biométriques et surveillance IP haute définition.",
+      technologies: ["HIKVISION", "ZKTECO", "IP Cam", "DAHUA"],
+      company: "KYKA SERVICE / Résidence KARIM",
+      period: "2024 - 2025",
     },
-   
     {
-      id: 8,
-      title: "Solutions Sécurité & Surveillance",
-      description: "Installation et Configuration de Camera de Surveillances.",
-      technologies: ["IKVISION", "Biométrie", "IP", "Sécurité", "ZKTECO"],
-      company: "Residence KARIM SINFRA ",
-      period: "SEPTEMBRE2025",
-      link: "#"
-    },
-
-    {
-      id: 9,
-      title: "Regis-Portfolio",
-      description: "Creation de Portfolio.",
-      technologies: ["HTLM", "PYTHON", "CSS", "ReactJS"],
-      company: "Regis Abe ",
-      period: "OCTOBRE 2025",
-      link: "#"
-    },
-    
-   {
       id: 10,
-      title: "Creation d'application de Gestion de Site WEb",
-      description: "Creation d'une Application de Gestion de Boutique",
-      technologies: ["HTLM", "PYTHON", "CSS", "ReactJS", "Django", "PSQL"],
-      company: "Projet Github ",
-      period: "JUIN 2025",
-      link: "#"
+      category: "Développement",
+      icon: <Code className="p-icon" />,
+      title: "Application de Gestion Commerciale",
+      description: "Développement d'une solution complète de gestion de stock et de ventes pour boutiques.",
+      technologies: ["ReactJS", "Django", "PostgreSQL", "Python"],
+      company: "Open Source / GitHub",
+      period: "Juin 2025",
     },
-
     {
       id: 11,
-      title: "Creation d'application de Gestion d'église",
-      description: "Creation d'une Application de Gestion d'église",
-      technologies: ["HTLM", "PYTHON", "CSS", "ReactJS", "Django", "PSQL"],
-      company: "Projet Github ",
-      period: "EN COURS",
-      link: "#"
-    },
-
-
+      category: "Développement",
+      icon: <Code className="p-icon" />,
+      title: "Gestion d'Établissement Religieux",
+      description: "Conception d'une plateforme de gestion des membres, des événements et de la comptabilité.",
+      technologies: ["ReactJS", "Django REST", "PostgreSQL"],
+      company: "Projet GitHub",
+      period: "En cours",
+    }
   ];
 
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
         <h2 className="section-title" data-aos="fade-up">
-          Mes Réalisations Professionnelles
+          Expertises & Réalisations
         </h2>
-        <p className="projects-subtitle" data-aos="fade-up" data-aos-delay="100">
-          Projets et missions réalisés en entreprise et en freelance
+        <div className="underline"></div>
+        <p className="projects-subtitle" data-aos="fade-up">
+          Découvrez mes interventions techniques en infrastructure, énergie et développement logiciel.
         </p>
         
         <div className="projects-grid">
@@ -129,11 +92,15 @@ function Projects() {
             <div 
               key={project.id} 
               className="project-card"
-              data-aos="fade-up"
-              data-aos-delay={index * 50}
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
             >
+              <div className="project-category-tag">{project.category}</div>
+              
               <div className="project-header">
-                <div className="project-icon">🌐</div>
+                <div className="project-icon-box">
+                  {project.icon}
+                </div>
                 <div className="project-meta">
                   <span className="project-company">{project.company}</span>
                   <span className="project-period">{project.period}</span>

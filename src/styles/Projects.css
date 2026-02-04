@@ -1,6 +1,6 @@
 .projects {
   padding: 80px 20px;
-  background-color: #f8f9fa;;
+  background-color: #f8f9fa; /* Fond clair pour trancher avec le Hero bleu */
 }
 
 .projects-container {
@@ -8,165 +8,99 @@
   margin: 0 auto;
 }
 
+.section-title {
+  text-align: center;
+  color: #007bff; /* Ton bleu */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
   margin-top: 50px;
-  
 }
 
 .project-card {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border-color: #007bff;
 }
 
-.project-image {
-  height: 200px;
-  background: linear-gradient(135deg, #282828 0%, #1b8aae 100%);
+.project-category-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #e7f1ff;
+  color: #007bff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.project-icon-box {
+  width: 50px;
+  height: 50px;
+  background: #007bff;
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.project-info {
-  padding: 25px;
+.p-icon {
+  width: 24px;
+  height: 24px;
 }
 
-.project-info h3 {
-  font-size: 22px;
-  color: #333;
+.project-meta {
   margin-bottom: 15px;
 }
 
-.project-info p {
-  font-size: 15px;
-  color: #282828;
-  line-height: 1.6;
-  margin-bottom: 20px;
+.project-company {
+  display: block;
+  font-weight: bold;
+  color: #333;
 }
 
-.technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 20px;
+.project-period {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.project-info h3 {
+  margin-bottom: 10px;
+  color: hwb(63 1% 90% / 0.959);
 }
 
 .tech-tag {
-  background-color: #e0e7ff;
-  color: #2563eb;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.project-link {
   display: inline-block;
-  color: #54400c;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.project-link:hover {
-  color: #1d4ed8;
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* Responsive Projects */
-@media (max-width: 768px) {
-  .projects {
-    padding: 60px 20px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
-  .project-card {
-    max-width: 100%;
-  }
-
-  .project-info h3 {
-    font-size: 20px;
-  }
-
-  .project-info p {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects {
-    padding: 40px 15px;
-  }
-
-  .project-image {
-    height: 180px;
-  }
-
-  .project-info {
-    padding: 20px;
-  }
-
-  .technologies {
-    gap: 8px;
-  }
-
-  .tech-tag {
-    font-size: 12px;
-    padding: 4px 10px;
-  }
-}
-
-
-.projects-subtitle {
-  text-align: center;
-  color: #282828;
-  font-size: 18px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-}
-
-.project-image span {
-  font-size: 60px;
-  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-}
-
-/* Couleurs différentes pour les tags selon le type */
-.tech-tag {
-  background-color: #e0e7ff;
-  color: #2563eb;
-}
-
-/* Variantes de couleurs pour diversifier */
-.project-card:nth-child(2n) .tech-tag {
-  background-color: #dbeafe;
-  color: #1e40af;
-}
-
-.project-card:nth-child(3n) .tech-tag {
-  background-color: #e0f2fe;
-  color: #0369a1;
+  background: #f1f1f1;
+  color: #555;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  margin-right: 8px;
+  margin-top: 8px;
 }
