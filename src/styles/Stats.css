@@ -1,0 +1,104 @@
+/* Variables de couleurs pour le thème Bleu/Blanc (à définir globalement si possible) */
+:root {
+    --primary-blue: #2563eb;
+    --secondary-light: #f0f4f8;
+    --accent-blue: #1d4ed8;
+    --text-color-dark: #333;
+}
+
+.stats {
+    padding: 80px 20px;
+    /* Nouveau Dégradé (Bleu vers un Bleu/Gris Clair) */
+    background: linear-gradient(135deg, var(--primary-blue, #1b5bae ) 0%, #1b5bae 100%); 
+    color: white; /* Le texte des statistiques sera blanc sur ce fond */
+    overflow: hidden; 
+}
+
+.stats-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    /* Utilisation du blanc pour faire ressortir la carte */
+    background-color: rgba(255, 255, 255, 0.95); 
+    border-radius: 12px;
+    /* Bordure subtile en bleu clair */
+    border: 1px solid rgba(255, 255, 255, 0.5); 
+    
+    /* Le texte de l'item passe au sombre pour contraster avec le fond blanc */
+    color: var(--text-color-dark, #333); 
+
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    background-color: #ffffff; /* Totalement blanc au survol */
+    transform: translateY(-8px);
+    /* Ombre subtile bleue */
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); 
+}
+
+.stat-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    /* L'icône prend la couleur du bleu primaire */
+    color: var(--primary-blue, #2563eb); 
+    /* L'ombre portée est conservée, mais ajustée pour un fond clair */
+    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.3));
+}
+
+.stat-number {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 5px;
+    /* Couleur plus sombre pour la lisibilité */
+    color: var(--accent-blue, #1d4ed8);
+    text-shadow: none; /* Supprimer l'ombre sur fond clair */
+}
+
+.stat-label {
+    font-size: 17px;
+    opacity: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-color-dark, #333);
+}
+
+
+/* Responsive (inchangé, mais s'applique aux nouvelles couleurs) */
+@media (max-width: 992px) {
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats {
+        padding: 50px 20px;
+    }
+
+    .stats-container {
+        gap: 25px;
+    }
+
+    .stat-number {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats {
+        padding: 30px 15px;
+    }
+}
