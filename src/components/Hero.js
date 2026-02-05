@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Hero.css';
-import CV from '../assets/CV_REGIS_ABE.pdf';
+import CV from '../assets/Mon_cv.pdf';
 
 function Hero() {
   const titles = [
