@@ -1,28 +1,36 @@
 import React from 'react';
-import { Network, Monitor, Cpu, Users } from 'lucide-react'; // Import d'icônes pour chaque catégorie
+import { Network, Monitor, Cpu, Users, Palette } from 'lucide-react'; 
 import '../styles/Skills.css';
 
 function Skills() {
   const skillsData = [
     {
       category: "Réseaux & Télécoms",
-      icon: <Network size={20} />,
+      icon: <Network size={30} />,
       skills: [
-        "LAN / WAN / VLAN", "Fibre Optique & Cuivre", "Routage & Commutation", 
-        "DNS / DHCP / IP", "Pare-feu & VPN", "Wi-Fi Professionnel"
+        "LAN / WAN / VLAN", "Fibre Optique & Cuivre", 
+        "DNS / DHCP / IP", "Pare-feu & VPN", "Wi-Fi Professionnel", "Caméra IP/PTZ/Solaire"
       ]
     },
     {
       category: "Systèmes & Outils",
-      icon: <Monitor size={20} />,
+      icon: <Monitor size={30} />,
       skills: [
-        "Windows & Linux Server", "Cisco / Mikrotik", "Virtualisation (VMware)", 
-        "Téléphonie IP", "GNS3 / PVSYST / GLPI"
+        "Windows Server", "Cisco / Mikrotik / TP-Link", "ZTE / Huawei / Nokia", 
+        "Téléphonie PABX/PBX", "GNS3 / PVSYST / GLPI", "Maitrise des outils IA (Gemini, Chat GTP, Claude etc...)"
+      ]
+    },
+    {
+      category: "Design",
+      icon: <Palette size={30} />,
+      skills: [
+        "Affiches & Flyers", "CV Professionnels", "Cartes de visite", 
+        "Montage Photo", "Identité Visuelle / Canva"
       ]
     },
     {
       category: "Informatique & Solaire",
-      icon: <Cpu size={20} />,
+      icon: <Cpu size={30} />,
       skills: [
         "Maintenance HW/SW", "Sécurité Électronique", "Solaire Photovoltaïque", 
         "Bases de données", "HTML / CSS / JS"
@@ -30,10 +38,10 @@ function Skills() {
     },
     {
       category: "Compétences Humaines",
-      icon: <Users size={20} />,
+      icon: <Users size={30} />,
       skills: [
         "Analyse & Résolution", "Apprentissage Rapide", "Communication", 
-        "Esprit d'équipe", "Transfert de Savoir"
+        "Esprit d'équipe", "Transfert de Savoir",
       ]
     }
   ];

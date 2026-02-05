@@ -4,38 +4,52 @@ import '../styles/Projects.css';
 
 function Projects() {
   const projects = [
-    {
+      {
       id: 1,
+      category: "Développement",
+      icon: <Code className="p-icon" />,
+      title: "Gestion d'Établissement Religieux",
+      description: "Conception d'une plateforme de gestion des membres, des événements et de la comptabilité.",
+      technologies: ["ReactJS", "Django REST", "PostgreSQL"],
+      company: "Projet GitHub",
+      period: "En cours",
+    },
+    
+    {
+      id: 2,
+      category: "Développement",
+      icon: <Code className="p-icon" />,
+      title: "Application de Gestion Commerciale",
+      description: "Développement d'une solution complète de gestion de stock et de ventes pour boutiques.",
+      technologies: ["ReactJS", "Django", "PostgreSQL", "Python"],
+      company: "Open Source / GitHub",
+      period: "2025",
+    },
+
+    {
+      id: 3,
       category: "Digitalisation",
       icon: <Server className="p-icon" />,
       title: "Consultant DPI - Système Hospitalier",
       description: "Accompagnement à la transformation digitale : formation du personnel médical et déploiement du Dossier Patient Informatisé.",
       technologies: ["DPI", "Santé Digitale", "Support Technique"],
-      company: "EPHD SINFRA",
+      company: "HOPITAL GENERAL DE SINFRA",
       period: "2025",
     },
+
     {
-      id: 2,
+      id: 4,
       category: "Réseau",
       icon: <Wifi className="p-icon" />,
-      title: "Infrastructure Fibre Optique (FTTH)",
-      description: "Déploiement de solutions Très Haut Débit et raccordement client final pour le réseau Orange CI.",
-      technologies: ["FTTH", "Soudure Fibre", "Réflectométrie"],
-      company: "Centre Culturel TIC Ivoiro-Coréen",
-      period: "2023",
+      title: "Installation de Point d'Accès (AP)",
+      description: "Câblage et installation de Point d'Accès.",
+      technologies: ["ZTE", "TPLink", "Xiaomi"],
+      company: "PERFECT CONSULTING",
+      period: "2024",
     },
+    
     {
       id: 5,
-      category: "Réseau",
-      icon: <Globe className="p-icon" />,
-      title: "Audit & Optimisation LAN",
-      description: "Actualisation complète du réseau LAN : câblage structuré, segmentation VLAN et sécurisation des accès.",
-      technologies: ["Cisco", "VLAN", "Câblage Structuré"],
-      company: "Ministère du Plan et du Développement CI",
-      period: "Déc. 2022",
-    },
-    {
-      id: 6,
       category: "Énergie",
       icon: <Sun className="p-icon" />,
       title: "Ingénierie Photovoltaïque",
@@ -44,36 +58,41 @@ function Projects() {
       company: "ALSERVCI",
       period: "2024",
     },
+
     {
-      id: 7,
+      id: 6,
       category: "Sécurité",
       icon: <Shield className="p-icon" />,
       title: "Sécurité & Biométrie",
       description: "Mise en place de systèmes de contrôle d'accès biométriques et surveillance IP haute définition.",
       technologies: ["HIKVISION", "ZKTECO", "IP Cam", "DAHUA"],
       company: "KYKA SERVICE / Résidence KARIM",
-      period: "2024 - 2025",
+      period: "2024",
     },
+
+
     {
-      id: 10,
-      category: "Développement",
-      icon: <Code className="p-icon" />,
-      title: "Application de Gestion Commerciale",
-      description: "Développement d'une solution complète de gestion de stock et de ventes pour boutiques.",
-      technologies: ["ReactJS", "Django", "PostgreSQL", "Python"],
-      company: "Open Source / GitHub",
-      period: "Juin 2025",
+      id: 7,
+      category: "Réseau",
+      icon: <Wifi className="p-icon" />,
+      title: "Infrastructure Fibre Optique (FTTH)",
+      description: "Tirage et raccordement client final pour le réseau Fibre OptiqueOrange CI.",
+      technologies: ["FTTH", "Orange CI"],
+      company: "Centre Culturel TIC Ivoiro-Coréen",
+      period: "2023",
     },
+    
     {
-      id: 11,
-      category: "Développement",
-      icon: <Code className="p-icon" />,
-      title: "Gestion d'Établissement Religieux",
-      description: "Conception d'une plateforme de gestion des membres, des événements et de la comptabilité.",
-      technologies: ["ReactJS", "Django REST", "PostgreSQL"],
-      company: "Projet GitHub",
-      period: "En cours",
-    }
+      id: 8,
+      category: "Réseau",
+      icon: <Globe className="p-icon" />,
+      title: "Audit & Optimisation LAN",
+      description: "Actualisation complète du réseau LAN : câblage structuré, segmentation VLAN et sécurisation des accès.",
+      technologies: ["Cisco", "VLAN", "Câblage Structuré"],
+      company: "Ministère du Plan et du Développement CI",
+      period: "2022",
+    },
+    
   ];
 
   return (

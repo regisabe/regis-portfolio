@@ -3,8 +3,8 @@ import '../styles/Stats.css';
 
 // 1. Structure des données centralisée
 const STATS_DATA = [
-  { key: 'projects', target: 15, label: 'Projets Réalisés', icon: '🚀' },
-  { key: 'clients', target: 50, label: 'Clients Satisfaits', icon: '👥' },
+  { key: 'projects', target: 16, label: 'Projets Réalisés', icon: '🚀' },
+  { key: 'clients', target: 60, label: 'Clients Satisfaits', icon: '👥' },
   { key: 'experience', target: 4, label: "Années d'Expérience", icon: '⏱️' },
   { key: 'certifications', target: 2, label: 'Certifications Obtenues', icon: '🎓' },
 ];

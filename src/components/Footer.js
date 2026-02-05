@@ -1,5 +1,6 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare, Calendar } from 'lucide-react';
+/* Remplacement de MessageSquare par MessageCircle pour l'icône WhatsApp */
+import { Mail, Phone, MapPin, Linkedin, Github, MessageCircle, Calendar } from 'lucide-react';
 import '../styles/Footer.css';
 
 function Footer() {
@@ -31,9 +32,9 @@ function Footer() {
           <div className="footer-section">
             <h4>Contact</h4>
             <ul className="footer-contact">
-              <li><Mail size={16} /> regisabe@outlook.com</li>
-              <li><Phone size={16} /> +225 07 88 90 07 31</li>
-              <li><MapPin size={16} /> Cocody, Abidjan</li>
+              <li><Mail size={20} /> regisabe@outlook.com</li>
+              <li><Phone size={20} /> +225 0788900731 / 0502495556</li>
+              <li><MapPin size={20} /> Cocody, Abidjan</li>
             </ul>
           </div>
 
@@ -41,10 +42,10 @@ function Footer() {
           <div className="footer-section">
             <h4>Suivez-moi</h4>
             <div className="footer-social">
-              <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={20} /></a>
-              <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" title="GitHub"><Github size={20} /></a>
-              <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageSquare size={20} /></a>
-              <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" title="Prendre RDV"><Calendar size={20} /></a>
+              <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><Linkedin size={30} /></a>
+              <a href="https://github.com/regisabe" target="_blank" rel="noopener noreferrer" title="GitHub"><Github size={30} /></a>
+              <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" title="WhatsApp"><MessageCircle size={30} /></a>
+              <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" title="Prendre RDV"><Calendar size={30} /></a>
             </div>
           </div>
         </div>

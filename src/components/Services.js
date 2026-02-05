@@ -9,42 +9,42 @@ function Services() {
       icon: <Wifi className="s-icon" />,
       title: "Infrastructure FTTH",
       description: "Déploiement complet de réseaux fibre optique pour particuliers et entreprises (Orange, Moov, GVA).",
-      features: ["Installation & Soudure", "Raccordement final", "Tests photométriques", "Audit réseau"]
+      features: ["Câblage", "Installation & Soudure", "Raccordement final", "Tests de continuité", "Genie civil"]
     },
     {
       id: 2,
       icon: <Settings className="s-icon" />,
       title: "Maintenance Systèmes",
       description: "Support technique complet : installation d'OS, sécurisation logicielle et optimisation matérielle.",
-      features: ["Windows & Linux", "Sécurité Antivirus", "Sauvegarde Cloud", "Dépannage matériel"]
+      features: ["Windows", "Sécurité Antivirus" , "Dépannage matériel"]
     },
     {
       id: 3,
       icon: <Share2 className="s-icon" />,
       title: "Réseaux LAN & WLAN",
-      description: "Conception et configuration de réseaux locaux robustes pour une connectivité sans faille.",
-      features: ["Câblage structuré", "VLAN & MicroTik", "Domotique IP", "Administration Serveur"]
+      description: "Conception et configuration de réseaux locaux pour une connectivité sans faille.",
+      features: ["Câblage structuré", "VLAN & MicroTik", "Domotique IP",  "Téléphonie PABX",  "Administeur Système"]
     },
     {
       id: 4,
       icon: <ShieldCheck className="s-icon" />,
-      title: "Sécurité & Biométrie",
-      description: "Installation de solutions de surveillance intelligente et contrôle d'accès biométrique.",
-      features: ["Caméras IP/PTZ", "Reconnaissance faciale", "Interphonie IP", "Téléphonie PABX"]
+      title: "Sécurité",
+      description: "Installation de solutions de surveillance intelligente et contrôle d'accès biométrique et facial.",
+      features: ["Caméras IP/PTZ/Solaire", "Pointeuse Biométrique et Reconnaissance faciale", "Interphonie et visiophonie IP"]
     },
     {
       id: 5,
       icon: <Sun className="s-icon" />,
       title: "Énergie Solaire",
       description: "Étude et dimensionnement de systèmes photovoltaïques pour une autonomie énergétique durable.",
-      features: ["Étude d'ensoleillement", "Dimensionnement", "Installation hybride", "Maintenance"]
+      features: ["Étude et Dimensionnement", "Installation hybride isolé et pompage", "Maintenance"]
     },
     {
       id: 6,
       icon: <GraduationCap className="s-icon" />,
-      title: "Consulting & Formation",
-      description: "Accompagnement stratégique et formation sur les outils réseaux et logiciels spécialisés (DPI).",
-      features: ["Formation sur site", "Audit SI", "Support utilisateur", "Conseils techniques"]
+      title: "Conseils & Formations",
+      description: "Accompagnement stratégique et formation sur les outils réseaux et logiciels spécialisés.",
+      features: ["Formation sur site", "Support utilisateur", "Microsoft Office", "Conseils techniques"]
     }
   ];
 

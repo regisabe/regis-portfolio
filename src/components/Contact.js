@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, MapPin, Linkedin, MessageSquare, Calendar } from 'lucide-react';
+// Remplacement de MessageSquare par MessageCircle pour un look plus "WhatsApp"
+import { Mail, Phone, MapPin, Linkedin, MessageCircle, Calendar } from 'lucide-react';
 import '../styles/Contact.css';
 import emailjs from '@emailjs/browser';
 
@@ -14,7 +15,6 @@ function Contact() {
   const [status, setStatus] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  // Effacer le message de statut après 5 secondes
   useEffect(() => {
     if (status) {
       const timer = setTimeout(() => setStatus(''), 5000);
@@ -64,7 +64,6 @@ function Contact() {
         </div>
 
         <div className="contact-content">
-          {/* Colonne Gauche : Infos */}
           <div className="contact-info" data-aos="fade-right">
             <h3>Parlons de votre projet</h3>
 
@@ -80,7 +79,7 @@ function Contact() {
               <div className="info-icon"><Phone size={20} /></div>
               <div>
                 <h4>Téléphone</h4>
-                <p>+225 07 88 90 07 31</p>
+                <p>+225 0788900731 / +225 0502495556</p>
               </div>
             </div>
 
@@ -95,20 +94,20 @@ function Contact() {
             <div className="social-links-container">
               <h4>Suivez-moi</h4>
               <div className="social-grid">
-                <a href="https://linkedin.com/..." target="_blank" rel="noreferrer" className="social-btn">
-                  <Linkedin size={20} />
+                <a href="https://www.linkedin.com/in/regis-demonsthene-abe/" target="_blank" rel="noopener noreferrer" className="social-btn">
+                  <Linkedin size={30} />
                 </a>
-                <a href="https://wa.me/..." target="_blank" rel="noreferrer" className="social-btn whatsapp">
-                  <MessageSquare size={20} />
+                {/* Icône WhatsApp mise à jour */}
+                <a href="https://wa.me/2250788900731" target="_blank" rel="noopener noreferrer" className="social-btn whatsapp">
+                  <MessageCircle size={30} />
                 </a>
-                <a href="https://cal.com/..." target="_blank" rel="noreferrer" className="social-btn calendar">
-                  <Calendar size={20} />
+                <a href="https://cal.com/regis-abe/30min" target="_blank" rel="noopener noreferrer" className="social-btn calendar">
+                  <Calendar size={30} />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Colonne Droite : Formulaire */}
           <form className="contact-form" onSubmit={handleSubmit} data-aos="fade-left">
             <div className="form-row">
               <div className="form-group">
@@ -123,7 +122,7 @@ function Contact() {
 
             <div className="form-group">
               <label>Sujet</label>
-              <input type="text" name="subject" required placeholder="Demande de devis fibre / Solaire" value={formData.subject} onChange={handleChange} />
+              <input type="text" name="subject" required placeholder="Demande de devis fibre / Solaire/ Téléphonie, Entretien ..." value={formData.subject} onChange={handleChange} />
             </div>
 
             <div className="form-group">

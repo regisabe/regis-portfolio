@@ -6,9 +6,8 @@ function Hero() {
   const titles = [
     "Technicien Réseau & Télécoms",
     "Spécialiste FTTH",
-    "Spécialiste Réseaux",
+    "Spécialiste Réseaux et Câblage informatique",
     "Technicien Certifié",
-    "Expert Cablage reseaux",
   ];
 
   const [titleIndex, setTitleIndex] = useState(0);

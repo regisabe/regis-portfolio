@@ -10,7 +10,7 @@ import Skills from './components/Skills';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
+/*import ScrollToTop from './components/ScrollToTop';
 /*import ThemeToggle from './components/ThemeToggle';*/
 
 function App() {
@@ -27,7 +27,6 @@ function App() {
       <Certifications />
       <Contact />
       <Footer />
-      <ScrollToTop />
     </div>
   );
 }

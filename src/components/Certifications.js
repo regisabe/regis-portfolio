@@ -8,18 +8,29 @@ function Certifications() {
       id: 1,
       title: "Système Photovoltaïque",
       issuer: "ALSERVCI",
-      date: "Décembre 2024",
-      description: "Étude, dimensionnement et installation de systèmes photovoltaïques",
+      date: "2024",
+      description: "Étude, dimensionnement et installation de systèmes photovoltaïques (isolé, hybride et Pompage)",
       icon: "☀️"
     },
+
+      {
+      id: 4,
+      title: "Technicien Réseaux et Télécoms",
+      issuer: "Ecole de la FIbre / Orange Côte d'Ivoire",
+      date: "2023",
+      description: "Réseau Fibre Optique, Génie Civil, Installations et maintenances FTTH, et Relation Client terrain",
+      icon: "🎓"
+    },
+
     {
       id: 2,
       title: "Technicien Réseaux et Télécoms",
-      issuer: "Premium Company SA / 2XL BTP-CI",
-      date: "2022 - 2025",
-      description: "Maintenance d'infrastructures Fibre Optique (Orange, Moov, GVA)",
+      issuer: "Premium Company SA",
+      date: "2022",
+      description: "Installation et Maintenance d'infrastructures Fibre Optique",
       icon: "🌐"
     },
+
     {
       id: 3,
       title: "Brevet de Technicien Supérieur (BTS)",
@@ -27,13 +38,14 @@ function Certifications() {
       date: "2021",
       description: "Réseaux Informatiques et Télécommunications",
       icon: "🎓"
-    }
+    },
+    
   ];
 
   return (
     <section className="certifications" id="certifications">
       <div className="certifications-container">
-        <h2 className="section-title" data-aos="fade-up">Diplômes & Certifications</h2>
+        <h2 className="section-title" data-aos="fade-up">Formations & Diplômes</h2>
         <div className="underline"></div>
         <div className="certifications-grid">
           {certifications.map((cert, index) => (
